@@ -29,9 +29,10 @@ statement
 ;
 
 expr
-: expr op=(MUL | DIV | MOD) expr
-| expr op=(ADD | SUB) expr
-| LPAREN expr RPAREN
+: operator=(ADD | SUB) expr              //Unary (eg -1000)
+| expr operator=(MUL | DIV | MOD) expr   //Mul/Div/Mod
+| expr operator=(ADD | SUB) expr         //Add/sub
+| LPAREN expr RPAREN                     //(expr)
 | list
 | atom
 ;

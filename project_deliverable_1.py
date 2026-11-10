@@ -4,6 +4,7 @@ assign1 = "20"
 assign2 = 123
 assign3 = 1.23
 assign4 = assign1
+assign5 = -456
 
 arith_op1 = 1 + 2
 arith_op2 = 13 - 3
