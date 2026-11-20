@@ -43,8 +43,12 @@ list
 
 ifStatement
 : IF expr COLON block
-(NEWLINE ELIF expr COLON block)*
-(NEWLINE ELSE COLON block)?
+  (NEWLINE ELIF expr COLON block)*
+  (NEWLINE ELSE COLON block)?
+;
+
+block
+: NEWLINE statement (NEWLINE statement)*
 ;
 
 augmentedAssign
