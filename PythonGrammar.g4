@@ -26,12 +26,17 @@ program
 statement
 : NAME ASSIGN expr  
 | NAME augmentedAssign expr
+| ifStatement
 ;
 
 expr
 : operator=(ADD | SUB) expr              //Unary (eg -1000)
 | expr operator=(MUL | DIV | MOD) expr   //Mul/Div/Mod
 | expr operator=(ADD | SUB) expr         //Add/sub
+| expr operator=(LESSER | LESSER_EQ | GREATER | GREATER_EQ | EQUALS | NOTEQUALS) expr   
+| NOT expr                               //not 
+| expr AND expr                          //and
+| expr OR expr                           //or
 | LPAREN expr RPAREN                     //(expr)
 | list
 | atom
