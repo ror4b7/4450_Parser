@@ -41,6 +41,12 @@ list
 : LBRACK (expr (COMMA expr)*)? RBRACK
 ;
 
+ifStatement
+: IF expr COLON block
+(NEWLINE ELIF expr COLON block)*
+(NEWLINE ELSE COLON block)?
+;
+
 augmentedAssign
 : ADD_ASSIGN
 | SUB_ASSIGN
@@ -69,6 +75,8 @@ bool
 /////////////////////////////////////////////
 
 ASSIGN : '=' ;
+
+COLON : ':' ;
 
 //Assignment Operators (longest match wins, so '+=' beats '+')
 ADD_ASSIGN : '+=' ;
