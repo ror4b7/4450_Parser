@@ -91,9 +91,28 @@ LBRACK : '[' ;
 RBRACK : ']' ;
 COMMA  : ',' ;
 
+//Conditional Operators
+LESSER : '<' ;
+GREATER: '>' ;
+LESSER_EQ : '<=' ;
+GREATER_EQ : '>=' ;
+EQUALS : '==' ;
+NOTEQUALS : '!=' ;
+
+
+
+
 //Keywords have to be before NAME so they win the tie
 TRUE  : 'True' ;
 FALSE : 'False' ;
+
+AND : 'and' ;
+OR : 'or' ;
+NOT : 'not' ;
+
+IF : 'if' ;
+ELIF : 'elif' ;
+ELSE: 'else' ;
 
 NAME : [a-zA-Z_] [a-zA-Z_0-9]* ;
 
