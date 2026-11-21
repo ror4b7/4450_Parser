@@ -53,7 +53,7 @@ ifStatement
 ;
 
 block
-: NEWLINE statement (NEWLINE statement)*
+: (NEWLINE_INDENT statement)+
 ;
 
 augmentedAssign
