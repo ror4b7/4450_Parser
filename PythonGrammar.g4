@@ -150,7 +150,7 @@ STRING
 
 NEWLINE_INDENT : ( '\r'? '\n' [ \t]* ('#' ~[\r\n]*)? )* '\r'? '\n' [ \t]+ ;
 
-NEWLINE : '\r'? '\n' ;
+NEWLINE : ( '\r'? '\n' [ \t]* ('#' ~[\r\n]*)? )* '\r'? '\n' ;
 
 COMMENT : '#' ~[\r\n]* -> skip ;
 WS      : [ \t]+       -> skip ;
